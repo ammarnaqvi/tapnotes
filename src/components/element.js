@@ -14,11 +14,21 @@ const Element = ({ elem }) => {
 
 	const name = elem.properties?.name;
 
+	const want = elem.original?.want;
+
+	const active = structure
+		.filter((struct) => struct.type === "text")
+		.map((struct) => struct.original.id);
+
 	return (
 		<div className="my-4">
-			{elem.type === "section" && <Section data={data} name={name} />}
+			{elem.type === "section" && (
+				<Section data={data} name={name} want={want} active={active} />
+			)}
+			{elem.type === "folder" && (
+				<Folder data={data} name={name} want={want} active={active} />
+			)}
 			{elem.type === "line" && <Line data={data} />}
-			{elem.type === "folder" && <Folder data={data} name={name} />}
 			{elem.type === "text" && <Text name={name} />}
 		</div>
 	);
