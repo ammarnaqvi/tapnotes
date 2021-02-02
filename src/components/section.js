@@ -3,8 +3,8 @@ import Element from "./element";
 
 const Section = ({ data, name }) => {
 	return (
-		<div>
-			<div>{name}</div>
+		<div className="bg-gray-400 p-8">
+			<h1 className="text-3xl font-bold">{name}</h1>
 			<div>
 				{data.map((elem) => (
 					<Element elem={elem} />

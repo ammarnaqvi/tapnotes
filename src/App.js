@@ -6,7 +6,7 @@ import { StructureContext } from "./StructureContext";
 function App() {
 	const { loading, error } = useContext(StructureContext);
 	return (
-		<div className="App">
+		<div className="bg-gray-200 w-full min-h-screen flex items-center justify-center">
 			{loading ? <p>Loading</p> : <Structure />}
 			{error && <p>{error}</p>}
 		</div>

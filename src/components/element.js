@@ -15,7 +15,7 @@ const Element = ({ elem }) => {
 	const name = elem.properties?.name;
 
 	return (
-		<div>
+		<div className="my-4">
 			{elem.type === "section" && <Section data={data} name={name} />}
 			{elem.type === "line" && <Line data={data} />}
 			{elem.type === "folder" && <Folder data={data} name={name} />}

@@ -3,13 +3,10 @@ import Element from "./element";
 
 const Line = ({ data }) => {
 	return (
-		<div>
-			<div>line</div>
-			<div>
-				{data.map((elem) => (
-					<Element elem={elem} />
-				))}
-			</div>
+		<div className="bg-white px-6 py-1">
+			{data.map((elem) => (
+				<Element elem={elem} />
+			))}
 		</div>
 	);
 };
